@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiCollectionView.MVVM.Views.ProdutosSelecionadosView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:MauiCollectionView.MVVM.ViewModels"
+    Title="ProdutosSelecionadosView - Teste de Checkbox">
+    <!--<ContentPage.BindingContext>
+        <vm:ProdutoViewModel />
+    </ContentPage.BindingContext>-->
+
+    <Grid RowDefinitions="80,*">
+        <Button
+            x:Name="btnAvancar"
+            Grid.Row="0"
+            HeightRequest="50"
+            Text="Avançar"
+            WidthRequest="110" />
+
+        <CollectionView Grid.Row="1" ItemsSource="{Binding Produtos}">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Padding="10" HorizontalOptions="Center">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Title"
+                            Text="{Binding Nome}"
+                            TextColor="Blue" />
+
+                        <CheckBox IsChecked="{Binding EmOferta}" />
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

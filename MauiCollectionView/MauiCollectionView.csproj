@@ -80,6 +80,9 @@
 	  <MauiXaml Update="MVVM\Views\LayoutView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\ProdutosSelecionadosView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\ProdutoView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -5,15 +5,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Home Page - Times de Futebol">
 
-    <Grid RowDefinitions="80,700">
+    <Grid RowDefinitions="80,*">
         <Button
             x:Name="btnAvancar"
             Grid.Row="0"
+            Clicked="btnAvancar_Clicked"
             HeightRequest="50"
-            Text="Avançar"
-            WidthRequest="100" />
+            Text="Avançar  &gt;&gt;"
+            WidthRequest="110" />
 
-        <CollectionView Grid.Row="1" VerticalOptions="Center">
+        <CollectionView Grid.Row="1">
             <CollectionView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Santos</x:String>

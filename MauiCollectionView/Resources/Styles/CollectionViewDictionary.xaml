@@ -39,6 +39,8 @@
                 TextColor="Black"
                 VerticalOptions="Start" />
 
+            <CheckBox IsChecked="{Binding EmOferta}" />
+
         </Grid>
     </DataTemplate>
 
@@ -73,6 +75,8 @@
                 Text="{Binding Preco, StringFormat='R{0:C}'}"
                 TextColor="Black"
                 VerticalOptions="Start" />
+
+            <CheckBox IsChecked="{Binding EmOferta}" />
         </Grid>
     </DataTemplate>
 

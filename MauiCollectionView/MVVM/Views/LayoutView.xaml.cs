@@ -7,7 +7,7 @@ public partial class LayoutView : ContentPage
 	public LayoutView()
 	{
 		InitializeComponent();
-		BindingContext = new ProdutoViewModel();
+		//BindingContext = new ProdutoViewModel();
 	}
 
     private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)

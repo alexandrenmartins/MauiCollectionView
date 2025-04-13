@@ -1,51 +1,62 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiCollectionView.MVVM.Views.ContatosView"
-             Title="Contatos">
+<ContentPage
+    x:Class="MauiCollectionView.MVVM.Views.ContatosView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Contatos">
 
     <Grid RowDefinitions=".1*,.9*">
-        <Button Background="Black" TextColor="White" 
-                    Clicked="Button_Clicked"
-                    Text="Rolagem Manual" 
-                    FontSize="30"/>
+        <Button
+            Background="Black"
+            Clicked="Button_Clicked"
+            FontSize="30"
+            Text="Rolagem Manual"
+            TextColor="White" />
 
-        <CollectionView x:Name="cv1" ItemsSource="{Binding ContatosAgrupados}"
-                                 IsGrouped="True"
-                                 Scrolled="cv1_Scrolled" 
-                                 Grid.Row="1">
+        <CollectionView
+            x:Name="cv1"
+            Grid.Row="1"
+            IsGrouped="True"
+            ItemsSource="{Binding ContatosAgrupados}"
+            Scrolled="cv1_Scrolled">
 
             <CollectionView.ItemsLayout>
-                <LinearItemsLayout ItemSpacing="10" Orientation="Vertical"/>
+                <LinearItemsLayout ItemSpacing="10" Orientation="Vertical" />
             </CollectionView.ItemsLayout>
 
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <VerticalStackLayout Margin="20,0,0,0">
-                        <Label Text="{Binding Id}" FontSize="Large"/>
-                        <Label Text="{Binding Nome}" FontSize="Large"/>
-                        <Label Text="{Binding Email}" FontAttributes="Bold" 
-                                                     TextColor="Blue"/>
-                        <Label Text="{Binding Telefone}" FontAttributes="Bold"/>
+                        <Label FontSize="Large" Text="{Binding Id}" />
+                        <Label FontSize="Large" Text="{Binding Nome}" />
+                        <Label
+                            FontAttributes="Bold"
+                            Text="{Binding Email}"
+                            TextColor="Blue" />
+                        <Label FontAttributes="Bold" Text="{Binding Telefone}" />
                     </VerticalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
             <CollectionView.GroupHeaderTemplate>
                 <DataTemplate>
-                    <Label Text="{Binding Nome}"  BackgroundColor="{StaticResource Primary}"
-                                              FontAttributes="Bold" 
-                                              FontSize="30" 
-                                              HorizontalTextAlignment="Center" 
-                                              TextColor="White"/>
+                    <Label
+                        BackgroundColor="{StaticResource Primary}"
+                        FontAttributes="Bold"
+                        FontSize="30"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding Nome}"
+                        TextColor="White" />
                 </DataTemplate>
             </CollectionView.GroupHeaderTemplate>
             <CollectionView.GroupFooterTemplate>
                 <DataTemplate>
-                    <Label Margin="0,0,0,10"
-                       BackgroundColor="AliceBlue"
-                       Text="{Binding Count,StringFormat='Total de Contatos : {0:D}'}"
-                       HorizontalTextAlignment="Center"
-                       FontSize="Medium" TextColor="Black"/>
+                    <Label
+                        Margin="0,0,0,10"
+                        BackgroundColor="AliceBlue"
+                        FontSize="Medium"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding Count, StringFormat='Total de Contatos : {0:D}'}"
+                        TextColor="Black" />
                 </DataTemplate>
             </CollectionView.GroupFooterTemplate>
 
