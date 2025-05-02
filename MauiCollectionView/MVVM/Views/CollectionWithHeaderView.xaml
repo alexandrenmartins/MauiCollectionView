@@ -13,16 +13,24 @@
     <CollectionView ItemsSource="{Binding Produtos}">
         <CollectionView.Header>
             <HorizontalStackLayout BackgroundColor="LightGray">
+                <Grid Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="170" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
                 <Label
+                    Grid.Column="0"
                     Margin="10,0,0,0"
                     FontAttributes="Bold"
                     FontSize="12"
                     Text="Nome" />
                 <Label
+                    Grid.Column="1"
                     Margin="10,0,0,0"
                     FontAttributes="Bold"
                     FontSize="12"
                     Text="Preço" />
+                </Grid>
             </HorizontalStackLayout>
         </CollectionView.Header>
         <CollectionView.Footer>
@@ -38,7 +46,7 @@
             <DataTemplate>
                 <Grid Padding="10">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="170" />
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <Label
