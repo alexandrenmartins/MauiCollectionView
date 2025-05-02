@@ -9,7 +9,9 @@ namespace MauiCollectionView
             InitializeComponent();
 
             //MainPage = new ContatosView();
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new CollectionWithHeaderView();
+            
+            //MainPage = new NavigationPage(new MainPage());
         }
     }
 }
